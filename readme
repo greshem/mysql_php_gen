@@ -1,0 +1,5 @@
+#interface: 
+# one_step.sh  never in maintance again 
+
+perl tpl_qzjdb_php.pl  users
+
