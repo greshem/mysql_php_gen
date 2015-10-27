@@ -1,0 +1,6 @@
+add javascript if $_GET[id] not exist. 
+
+modify qzj_db.php , to deal with update insert .m 
+artical table design
+4. 把mysql 的 PHP的库修改掉 非常不爽。 
+###

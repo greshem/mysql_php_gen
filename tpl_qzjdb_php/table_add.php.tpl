@@ -1,0 +1,44 @@
+<html>
+<body>
+
+
+<table  cellspacing=1 cellpadding=1  bgcolor=#aaaaaa width=800>
+<?php 
+include ("db_pages.inc.php");
+include ("qzj_db.php");
+$sqldb=new db;
+$sqldb->connect_db("localhost", "root", "qianqian","[% db %]");
+$sqldb->query("select * from [% table %]");
+$count=$sqldb->get_count();
+echo "COUNT ",$count,"\n";
+$onepage=20;
+
+$pb= new AsPagebar($count, $onepage);
+$offset = $pb->offset();
+$pagebar2=$pb->whole_bar(2,9);
+
+echo "offset = ", $offset,"\n";
+$limit=$offset+$onepage;
+echo "limit".$limit;
+echo "offset".$offset;
+$sqldb->query("select * from [% table %] limit $offset ,$onepage ");
+echo "count =".$sqldb->get_count();
+while(list( [% FOREACH field IN fields %] $[% field %] ,[%END%] )=$sqldb->fetch_row())
+{
+	echo "<tr bgcolor=#ffffff >
+				[%FOREACH field IN fields %] 
+				<td>$[%field%]</td> 
+				[%END%]<tr>\n";
+
+
+}
+?>
+</table>
+
+<div align="left">
+<?php
+echo $pagebar2,"\n";
+?>
+</div>
+</body>
+</html>
