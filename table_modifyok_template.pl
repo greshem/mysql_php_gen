@@ -11,7 +11,7 @@ if(scalar(@ARGV) != 2)
 my $host='localhost';
 my $port='3306';
 my $user="root";
-my $passwd='passwordn';
+my $passwd='password';
 my $dsn="dbi:mysql:hostname=$host:port=$port:";
 my $backup="/tmp/backup";
 my $dbh= DBI->connect($dsn,$user,$passwd);

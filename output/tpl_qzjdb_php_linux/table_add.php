@@ -7,7 +7,7 @@
 include ("db_pages.inc.php");
 include ("qzj_db.php");
 $sqldb=new db;
-$sqldb->connect_db("localhost", "root", "passwordn","huanqiuweb");
+$sqldb->connect_db("localhost", "root", "password","huanqiuweb");
 $sqldb->query("select * from backuser_table");
 $count=$sqldb->get_count();
 echo "COUNT ",$count,"\n";

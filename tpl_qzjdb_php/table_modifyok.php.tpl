@@ -12,7 +12,7 @@ $[%field%]=$_POST['[%field%]'];
 [%END%]
 
 $sqldb=new db;
-$sqldb->connect_db("localhost","root","passwordn", "[%db%]");
+$sqldb->connect_db("localhost","root","password", "[%db%]");
 //$sqldb->query("select * from [%table%] where  [%FOREACH field IN fields%]  and [%field%]=$[%field%]  [%END%] ");
 $sqldb->query("select * from  [%table%] where id=$id");
 

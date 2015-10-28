@@ -104,13 +104,13 @@ if(!isset($_GET[id])) {
 <?
   $db_host="localhost";   
   $db_user="root";   
-  $db_password="passwordn";   
+  $db_password="password";   
   $db_name="huanqiuweb";   
   mysql_connect($db_host,$db_user,$db_password);   
   mysql_select_db($db_name);   
 
 	$sqldb=new db;
-	$sqldb->connect_db("localhost", "root", "passwordn", "huanqiuweb");
+	$sqldb->connect_db("localhost", "root", "password", "huanqiuweb");
   //从数据库中取得数据   
   //$query_string="select * from backuser_table order by content";   
   $query_string="select * from backuser_table where id=$_GET[id]; ";   

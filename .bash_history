@@ -731,10 +731,10 @@ ls
 vim table_modifyok.php 
 ls
 vim table_list.php 
-grep passwordn *
-sed 's/passwordn/password/g' *.php -i
+grep password *
+sed 's/password/password/g' *.php -i
 ls
-grep passwordn *
+grep password *
 ls
 cd ..
 ls

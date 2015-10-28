@@ -7,7 +7,7 @@
 include ("db_pages.inc.php");
 include ("qzj_db.php");
 $sqldb=new db;
-$sqldb->connect_db("localhost", "root", "passwordn","test");
+$sqldb->connect_db("localhost", "root", "password","test");
 $sqldb->query("select * from menu");
 $count=$sqldb->get_count();
 echo "COUNT ",$count,"\n";
