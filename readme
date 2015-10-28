@@ -1,5 +1,15 @@
 #interface: 
 # one_step.sh  never in maintance again 
 
-perl tpl_qzjdb_php.pl  users
+
+
+#
+#create a   template mysql table;
+cd /root/bin/
+perl  /root/bin/gen_rand_mysql_table.pl  test
+mv /root/bin/test.sql  ./ 
+
+
+#perl  tpl_qzjdb_php.pl  db_name  table_name 
+perl tpl_qzjdb_php.pl  test test 
 
