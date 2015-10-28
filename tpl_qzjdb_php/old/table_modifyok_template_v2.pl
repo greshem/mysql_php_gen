@@ -11,7 +11,7 @@ if(scalar(@ARGV) != 2)
 my $host='localhost';
 my $port='3306';
 my $user="root";
-my $passwd='qianqian';
+my $passwd='passwordn';
 my $dsn="dbi:mysql:hostname=$host:port=$port:";
 my $backup="/tmp/backup";
 my $dbh= DBI->connect($dsn,$user,$passwd);
@@ -75,7 +75,7 @@ $[%field%]=$_POST['[%field%]'];
 [%END%]
 
 $sqldb=new db;
-$sqldb->connect_db("localhost","root","qianqian", "[%db%]");
+$sqldb->connect_db("localhost","root","passwordn", "[%db%]");
 //$sqldb->query("select * from [%table%] where  [%FOREACH field IN fields%]  and [%field%]=$[%field%]  [%END%] ");
 $sqldb->query("select * from  [%table%] where id=$id");
 

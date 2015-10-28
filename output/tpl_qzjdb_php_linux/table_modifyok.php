@@ -24,7 +24,7 @@ $ba_date=$_POST['ba_date'];
 
 
 $sqldb=new db;
-$sqldb->connect_db("localhost","root","qianqian", "huanqiuweb");
+$sqldb->connect_db("localhost","root","passwordn", "huanqiuweb");
 //$sqldb->query("select * from backuser_table where    and ba_id=$ba_id    and ba_name=$ba_name    and ba_password=$ba_password    and ba_truename=$ba_truename    and fr_id=$fr_id    and ba_sta=$ba_sta    and ba_date=$ba_date   ");
 $sqldb->query("select * from  backuser_table where id=$id");
 

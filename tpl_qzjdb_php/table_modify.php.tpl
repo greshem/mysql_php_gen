@@ -50,13 +50,13 @@ if(!isset($_GET[id])) {
 <?php
   $db_host="localhost";   
   $db_user="root";   
-  $db_password="qianqian";   
+  $db_password="passwordn";   
   $db_name="[%db%]";   
   mysql_connect($db_host,$db_user,$db_password);   
   mysql_select_db($db_name);   
 
 	$sqldb=new db;
-	$sqldb->connect_db("localhost", "root", "qianqian", "[%db%]");
+	$sqldb->connect_db("localhost", "root", "passwordn", "[%db%]");
   //从数据库中取得数据   
   //$query_string="select * from [%table%] order by content";   
   $query_string="select * from [%table%] where id=$_GET[id]; ";   

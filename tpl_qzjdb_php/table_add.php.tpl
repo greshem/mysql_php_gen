@@ -7,7 +7,7 @@
 include ("db_pages.inc.php");
 include ("qzj_db.php");
 $sqldb=new db;
-$sqldb->connect_db("localhost", "root", "qianqian","[% db %]");
+$sqldb->connect_db("localhost", "root", "passwordn","[% db %]");
 $sqldb->query("select * from [% table %]");
 $count=$sqldb->get_count();
 echo "COUNT ",$count,"\n";
