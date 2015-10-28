@@ -2,7 +2,7 @@
 <head>
 <meta contentType="text/html" charset="GB2312">
 </head>
-<?
+<?php
 //初始化session
 session_start();
 //include ('head.php');
@@ -19,7 +19,7 @@ if(!isset($_GET[id])) {
    echo "<p align=center>";
    echo "<font color=#FF0000 size=5><strong><big>";
   // echo " <a href='$_'>登录</a>!";
-   echo " id 参数不存在, 错误";
+   echo " id 参数不存在, 错误, may be not exists in  mysql schema ";
    echo "</big></strong></font></p>";
    exit();
 }
@@ -47,16 +47,16 @@ if(!isset($_GET[id])) {
 </script>
 
 <body>
-<?
+<?php
   $db_host="localhost";   
   $db_user="root";   
-  $db_password="qianqian";   
+  $db_password="password";   
   $db_name="[%db%]";   
   mysql_connect($db_host,$db_user,$db_password);   
   mysql_select_db($db_name);   
 
 	$sqldb=new db;
-	$sqldb->connect_db("localhost", "root", "qianqian", "[%db%]");
+	$sqldb->connect_db("localhost", "root", "password", "[%db%]");
   //从数据库中取得数据   
   //$query_string="select * from [%table%] order by content";   
   $query_string="select * from [%table%] where id=$_GET[id]; ";   
@@ -84,7 +84,7 @@ if(!isset($_GET[id])) {
     <tr> 
       <td width="26%" align="right">[%field%] 修改：</td>
       <td width="74%"> 
-        <input name="[%field%]" type="text" value="<? echo $[%field%] ?> " size="50" maxlength="100">
+        <input name="[%field%]" type="text" value="<?php echo $[%field%] ?> " size="50" maxlength="100">
       </td>
     </tr>
    [%END%]

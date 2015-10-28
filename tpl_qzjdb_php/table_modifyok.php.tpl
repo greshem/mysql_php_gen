@@ -12,7 +12,7 @@ $[%field%]=$_POST['[%field%]'];
 [%END%]
 
 $sqldb=new db;
-$sqldb->connect_db("localhost","root","qianqian", "[%db%]");
+$sqldb->connect_db("localhost","root","password", "[%db%]");
 //$sqldb->query("select * from [%table%] where  [%FOREACH field IN fields%]  and [%field%]=$[%field%]  [%END%] ");
 $sqldb->query("select * from  [%table%] where id=$id");
 
@@ -38,12 +38,12 @@ if($sqldb->fetch_row())
 	<tr><td><a href="[%table%]_list.php"> [%db%]列表  </a> </td></tr>
 </table>
 	<table width="50%" border="1" cellspacing="1" cellpadding="3" align="center">
-	<tr><td><a href=[%table%]_modify.php?id=<? echo $id?> > 修改 </a> </td><td> ____ </td></tr>	
+	<tr><td><a href=[%table%]_modify.php?id=<?php echo $id?> > 修改 </a> </td><td> ____ </td></tr>	
     [% FOREACH field IN fields%]
 
     <tr><td width="24%"> [%field%] </td> 
 		<td width="76%"> 
-		<?echo 	$[%field%]   ?>
+		<?php echo 	$[%field%]   ?>
 		</td>
     </tr>
    [%END%]"
@@ -51,7 +51,7 @@ if($sqldb->fetch_row())
     
     
   </table>
-<?
+<?php
 }
 else
 {

@@ -731,10 +731,10 @@ ls
 vim table_modifyok.php 
 ls
 vim table_list.php 
-grep qianqian *
-sed 's/qianqian/password/g' *.php -i
+grep password *
+sed 's/password/password/g' *.php -i
 ls
-grep qianqian *
+grep password *
 ls
 cd ..
 ls

@@ -12,7 +12,7 @@ if(scalar(@ARGV) != 2)
 my $host='localhost';
 my $port='3306';
 my $user="root";
-my $passwd='qianqian';
+my $passwd='password';
 my $dsn="dbi:mysql:hostname=$host:port=$port:";
 my $backup="/tmp/backup";
 my $dbh= DBI->connect($dsn,$user,$passwd);
@@ -115,13 +115,13 @@ if(!isset($_GET[id])) {
 <?
   $db_host="localhost";   
   $db_user="root";   
-  $db_password="qianqian";   
+  $db_password="password";   
   $db_name="[%db%]";   
   mysql_connect($db_host,$db_user,$db_password);   
   mysql_select_db($db_name);   
 
 	$sqldb=new db;
-	$sqldb->connect_db("localhost", "root", "qianqian", "[%db%]");
+	$sqldb->connect_db("localhost", "root", "password", "[%db%]");
   //从数据库中取得数据   
   //$query_string="select * from [%table%] order by content";   
   $query_string="select * from [%table%] where id=$_GET[id]; ";   

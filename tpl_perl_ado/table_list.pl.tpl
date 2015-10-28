@@ -21,7 +21,7 @@ sub insertTo[%table%]()
 	 $dbh = DBI->connect (
 		#"dbi:mysql:database=huanqiuweb:host=localhost;mysql_emulated_prepare=0",
 		"dbi:mysql:database=[%db%]:host=localhost;",
-		"root", "qianqian",
+		"root", "password",
 		{ RaiseError => 1, PrintError => 0 },
 		);
 
